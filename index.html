@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игорь Щетинин — Frontend & AI Prompt Engineering</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ХЕДЕР -->
+    <header class="header">
+        <div class="header__container">
+            <a href="#" class="logo">Igor<span>.</span>Dev</a>
+            <nav class="nav">
+                <a href="#hero" class="nav__link">Главная</a>
+                <a href="#about" class="nav__link">Обо мне</a>
+                <a href="#portfolio" class="nav__link">Портфолио</a>
+                <a href="#services" class="nav__link">Услуги</a>
+                <a href="#contact" class="nav__link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO (доработан под макет) -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <span class="hero__badge"> Frontend Developer & Prompt Engineer</span>
+            <h1 class="hero__name">
+                Игорь
+                <span class="accent">Щетинин</span>
+            </h1>
+            <p class="hero__role">Создаю <span class="highlight">нейро-интерфейсы</span> будущего</p>
+            <p class="hero__description">Специализируюсь на разработке высокотехнологичных лендингов. Сочетаю мощь AI-промптинга с авиационной точностью кода.</p>
+            <div class="hero__actions">
+                <a href="#contact" class="btn btn--primary">Обсудить проект</a>
+                <a href="#portfolio" class="btn btn--secondary">Смотреть кейсы</a>
+            </div>
+        </div>
+        <div class="hero__visual">
+            <div class="hero__image-wrapper">
+                <img src="images/Image 4.png" alt="Игорь Щетинин" class="hero__image">
+            </div>
+        </div>
+    </section>
+
+    <!-- ОБО МНЕ -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title"><span class="accent">&lt;Цифровые продукты/&gt;</span><br> На стыке кода, смысла и AI</h2>
+            <div class="about__grid">
+                <div class="about__bio">
+                    <p class="about__lead">Специалист с высшим образованием и междисциплинарным опытом — от кабины пилота до Frontend-разработки.</p>
+                    <p>В настоящее время я являюсь преподавателем летного училища ГА. Это гарантирует предельную дисциплину, внимание к деталям и точность.</p>
+                    <p>Мой подход — «Нейросинтез»: я объединяю классическую разработку с продвинутым промпт-инжинирингом. Я не просто верстаю интерфейсы, а создаю смысловую архитектуру, извлекая пользу из хаоса данных с помощью ИИ.</p>
+                    <p>Благодаря богатому опыту работы я пишу тексты и код, которые проходят любую проверку на фактологию и логику.</p>
+                    <div class="about__stats">
+                        <div>
+                            <span class="stat-num">40%</span>
+                            <span class="stat-desc">Экономия времени за счет AI-пайплайнов</span>
+                        </div>
+                        <div>
+                            <span class="stat-num">100%</span>
+                            <span class="stat-desc">Точность терминологии (Whisper/GPT-4)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__stack">
+                    <div class="glass-card">
+                        <h3>Frontend Стек</h3>
+                        <p>React, Next.js, Tailwind, чистый код по стандартам SOLID/DRY.</p>
+                    </div>
+                    <div class="glass-card">
+                        <h3>AI & Смыслы</h3>
+                        <p>Whisper, Notta, Descript для транскрибации; DeepSeek и ChatGPT для экспертного копирайтинга.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОРТФОЛИО -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Выбранные проекты</h2>
+            <div class="portfolio__grid">
+                <article class="project-card">
+                    <div class="project-card__img"></div>
+                    <div class="project-card__content">
+                        <h3>Beer Store Landing</h3>
+                        <p>Сложная структура каталога и интерактивный UI.</p>
+                        <span class="tag">UI/UX Design</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card__img"></div>
+                    <div class="project-card__content">
+                        <h3>Aviation Training Docs</h3>
+                        <p>Система лекционных материалов для кадетов.</p>
+                        <span class="tag">System Design</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card__img"></div>
+                    <div class="project-card__content">
+                        <h3>AI Prompt Library</h3>
+                        <p>База знаний для автоматизации копирайтинга.</p>
+                        <span class="tag">AI Strategy</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ И КОНТАКТЫ -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <h2 class="section-title">Чем я могу помочь</h2>
+                    <ul class="services-list">
+                        <li><span>01</span> Разработка лендингов "под ключ"</li>
+                        <li><span>02</span> Prompt Engineering для бизнеса</li>
+                        <li><span>03</span> Обучающие материалы и транскрибация</li>
+                    </ul>
+                </div>
+                <div>
+                    <form class="contact-form">
+                        <h3 class="form-title">Запустить проект</h3>
+                        <input type="text" class="form-input" placeholder="Ваше имя" required>
+                        <input type="email" class="form-input" placeholder="Email" required>
+                        <textarea class="form-input" rows="5" placeholder="Опишите задачу..."></textarea>
+                        <button type="submit" class="btn btn--primary">Отправить сигнал</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer class="footer">
+        <p>© 2026 Igor Shchetinin. Синергия кода и интеллекта.</p>
+    </footer>
+</body>
+</html>

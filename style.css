@@ -472,6 +472,19 @@ PORTFOLIO SECTION
   background-image: repeating-linear-gradient(45deg, rgba(0, 229, 255, 0.05) 0px, rgba(0, 229, 255, 0.05) 2px, transparent 2px, transparent 8px);
 }
 
+/* Превью для карточки текущего сайта */
+.project-card__img--this-site {
+  background-image: url('images/Image 4.png') !important; /* Используем то же изображение, что и в Hero */
+  background-size: cover;
+  background-position: top center; /* Центрируем по верхней части для лучшего кадра */
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-card__img--this-site {
+  opacity: 1; /* Эффект «проявления» при наведении */
+}
+
 .project-card__content {
   padding: var(--spacing-lg);
 }

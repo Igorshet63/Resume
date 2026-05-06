@@ -1,0 +1,41 @@
+{
+  "profile": {
+    "name": "Игорь Щетинин",
+    "roles": ["Frontend Developer", "AI Prompt Engineer", "Aviation Instructor"],
+    "slogan": "Нейросинтез смыслов и кода"
+  },
+  "about": {
+    "lead": "Дисциплина авиации в каждом пикселе.",
+    "bio_highlights": [
+      "Профессиональный инструктор авиационного центра",
+      "Эксперт в области копирайтинга и транскрибации",
+      "Опыт работы с крупными индустриями: медицина, строительство, транспорт"
+    ],
+    "stats": {
+      "ai_acceleration": "40%",
+      "lighthouse_score": 90
+    }
+  },
+  "stack": {
+    "frontend": ["React", "Next.js", "Tailwind", "GSAP"],
+    "ai_tools": ["Whisper", "DeepSeek", "Descript", "Notta"],
+    "design": ["Figma", "UI/UX Architecture"]
+  },
+  "portfolio": [
+    {
+      "title": "Landing Page: Beer Store",
+      "description": "Техническое задание, JSON структура и верстка.",
+      "category": "Frontend"
+    },
+    {
+      "title": "Aviation ELT Course",
+      "description": "Интерактивные лекции по аварийно-спасательному оборудованию.",
+      "category": "Education"
+    }
+  ],
+  "services": [
+    "Создание высокотехнологичных лендингов",
+    "Автоматизация контента через AI",
+    "Транскрибация и технический копирайтинг"
+  ]
+}

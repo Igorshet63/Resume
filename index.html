@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- ХЕДЕР -->
     <header class="header">
         <div class="header__container">
             <a href="#" class="logo">Igor<span>.</span>Dev</a>
@@ -22,7 +21,6 @@
         </div>
     </header>
 
-    <!-- HERO (доработан под макет) -->
     <section class="hero" id="hero">
         <div class="hero__content">
             <span class="hero__badge"> Frontend Developer & Prompt Engineer</span>
@@ -44,7 +42,6 @@
         </div>
     </section>
 
-    <!-- ОБО МНЕ -->
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title"><span class="accent">&lt;Цифровые продукты/&gt;</span><br> На стыке кода, смысла и AI</h2>
@@ -79,43 +76,48 @@
         </div>
     </section>
 
-    <!-- ПОРТФОЛИО -->
     <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="section-title">Выбранные проекты</h2>
             <div class="portfolio__grid">
+                
+                <a href="#modal-site" class="project-card-link">
+                    <article class="project-card">
+                        <div class="project-card__img project-card__img--this-site"></div>
+                        <div class="project-card__content">
+                            <h3>Этот сайт:</h3>
+                            <p>«Нейросинтез» — живой пример реализации Cinematic Design и интеграции AI-инструментов.</p>
+                            <span class="tag">Открыть кейсы ➔</span>
+                        </div>
+                    </article>   
+                </a>
 
-                <article class="project-card">
-                    <!-- Добавляем специальный класс для этого блока -->
-                    <div class="project-card__img project-card__img--this-site"></div>
-                    <div class="project-card__content">
-                        <h3>Этот сайт:</h3>
-                        <p> «Нейросинтез» — живой пример реализации Cinematic Design и интеграции AI-инструментов.</p>
-                        <span class="tag">Frontend / UI-Design</span>
-                    </div>
-                </article>   
+                <a href="#modal-copywriting" class="project-card-link">
+                    <article class="project-card">
+                        <div class="project-card__img project-card__img--guide"></div>
+                        <div class="project-card__content">
+                            <h3>Копирайтинг</h3>
+                            <p>Статьи. Переводы. СЕО</p>
+                            <span class="tag">Смотреть работы ➔</span>
+                        </div>
+                    </article>
+                </a>
 
-                <article class="project-card">
-                    <div class="project-card__img"></div>
-                    <div class="project-card__content">
-                        <h3>Aviation Training Docs</h3>
-                        <p>Система лекционных материалов для кадетов.</p>
-                        <span class="tag">System Design</span>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <div class="project-card__img"></div>
-                    <div class="project-card__content">
-                        <h3>AI Prompt Library</h3>
-                        <p>База знаний для автоматизации копирайтинга.</p>
-                        <span class="tag">AI Strategy</span>
-                    </div>
-                </article>
+                <a href="#modal-landings" class="project-card-link">
+                    <article class="project-card">
+                        <div class="project-card__img project-card__img--beer"></div>
+                        <div class="project-card__content">
+                            <h3>Лендинги</h3>
+                            <p>Кейс: PROХМЕЛЬ. Посадочные страницы и карточки товаров.</p>
+                            <span class="tag">Развернуть стек ➔</span>
+                        </div>
+                    </article>
+                </a>
+
             </div>
         </div>
     </section>
 
-    <!-- УСЛУГИ И КОНТАКТЫ -->
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="contact-grid">
@@ -124,7 +126,7 @@
                     <ul class="services-list">
                         <li><span>01</span> Разработка лендингов "под ключ"</li>
                         <li><span>02</span> Prompt Engineering для бизнеса</li>
-                        <li><span>03</span> Обучающие материалы и транскрибация</li>
+                        <li><span>03</span> Копирайтинг</li>
                     </ul>
                 </div>
                 <div>
@@ -140,9 +142,53 @@
         </div>
     </section>
 
-    <!-- ФУТЕР -->
     <footer class="footer">
         <p>© 2026 Igor Shchetinin. Синергия кода и интеллекта.</p>
     </footer>
+
+    <div id="modal-site" class="modal-overlay">
+        <div class="modal-window">
+            <a href="#portfolio" class="modal-close">&times;</a>
+            <h3 class="modal-title">Архитектура "Этот сайт"</h3>
+            <p class="modal-text">Примеры исходного кода, логики промптов и дизайн-концептов данного портфолио.</p>
+            <div class="modal-buttons-grid">
+                <a href="#" class="btn btn--primary">Исходный код GitHub</a>
+                <a href="#" class="btn btn--secondary">Промпты для UI/UX</a>
+                <a href="#" class="btn btn--secondary">Схема Cinematic Design</a>
+                <a href="#" class="btn btn--secondary">Оптимизация стилей</a>
+                <a href="#" class="btn btn--secondary disabled">Логи сборки (Заглушка)</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-copywriting" class="modal-overlay">
+        <div class="modal-window">
+            <a href="#portfolio" class="modal-close">&times;</a>
+            <h3 class="modal-title">Портфолио: Копирайтинг</h3>
+            <p class="modal-text">Выбери интересующее направление, чтобы открыть документы с примерами текстов.</p>
+            <div class="modal-buttons-grid">
+                <a href="https://docs.google.com/document/d/e/2PACX-1vSeGCK1GJhtOJeg4nSQj3GuXzm9YnDDil5pE3tVy5aUGbjtEb6DBA6sCgiKSE_q30Sru28Xbn4STqZm/pub" target="_blank" class="btn btn--primary">SEO-статьи</a>
+                <a href="#" class="btn btn--secondary">Storytelling</a>
+                 <a href="https://docs.google.com/document/d/1_5NSqFms1VL6scaicS7QCjXUIm-scSdjndJIUULsleg/edit?tab=t.0" target="_blank" class="btn btn--primary">Для соц.сетей</a>
+                <a href="https://docs.google.com/document/d/1b35qB7iMBAOXEBOtkdci28DijciAy9UYDM7He5okNKk/edit?usp=sharing   " target="_blank" class="btn btn--primary">Переводы</a>
+                <a href="#" class="btn btn--secondary disabled">Доп. материалы (Заглушка)</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-landings" class="modal-overlay">
+        <div class="modal-window">
+            <a href="#portfolio" class="modal-close">&times;</a>
+            <h3 class="modal-title">Разработка Лендингов</h3>
+            <p class="modal-text">Интерактивные прототипы, JSON-структуры и реализованные посадочные страницы.</p>
+            <div class="modal-buttons-grid">
+                <a href="#" class="btn btn--primary">Кейс: PROХМЕЛЬ</a>
+                <a href="#" class="btn btn--secondary">JSON структуры данных</a>
+                <a href="#" class="btn btn--secondary">Компоненты Tailwind</a>
+                <a href="#" class="btn btn--secondary">Адаптивная верстка</a>
+                <a href="#" class="btn btn--secondary disabled">Интеграция с CRM (Заглушка)</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

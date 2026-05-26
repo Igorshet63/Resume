@@ -151,7 +151,7 @@ body::before {
 }
 
 /* ============================================
-HERO SECTION (доработан под макет)
+HERO SECTION
 ============================================ */
 .hero {
   display: flex;
@@ -170,7 +170,6 @@ HERO SECTION (доработан под макет)
   z-index: 2;
 }
 
-/* Бейдж роли — полупрозрачный с border */
 .hero__badge {
   display: inline-block;
   background: rgba(0, 229, 255, 0.08);
@@ -203,7 +202,6 @@ HERO SECTION (доработан под макет)
   letter-spacing: -2px;
 }
 
-/* Акцент на ключевых словах */
 .hero__name .accent {
   background: linear-gradient(135deg, var(--color-ai-spark) 0%, #80f0ff 100%);
   -webkit-background-clip: text;
@@ -241,7 +239,7 @@ HERO SECTION (доработан под макет)
 }
 
 /* ============================================
-КНОПКИ (60/30/10)
+КНОПКИ
 ============================================ */
 .btn {
   padding: 16px 36px;
@@ -260,7 +258,6 @@ HERO SECTION (доработан под макет)
   border: none;
 }
 
-/* Primary — AI-Spark (залитая) */
 .btn--primary {
   background: var(--color-ai-spark);
   color: var(--color-deep-code);
@@ -289,7 +286,6 @@ HERO SECTION (доработан под макет)
   left: 100%;
 }
 
-/* Secondary — Obsidian Glass (с border) */
 .btn--secondary {
   background: transparent;
   color: var(--color-clean-syntax);
@@ -305,7 +301,7 @@ HERO SECTION (доработан под макет)
 }
 
 /* ============================================
-HERO VISUAL (упрощён под макет)
+HERO VISUAL
 ============================================ */
 .hero__visual {
   position: relative;
@@ -327,12 +323,12 @@ HERO VISUAL (упрощён под макет)
 }
 
 .hero__image-wrapper:hover {
-  border-color: var(--color-ai-spark); /* Цвет рамки становится ярче, как у кнопок */
+  border-color: var(--color-ai-spark);
   box-shadow: 
     var(--shadow-card), 
-    0 0 30px var(--color-ai-spark-glow), /* Основное свечение */
-    0 0 60px rgba(0, 229, 255, 0.15);    /* Мягкий внешний ореол */
-  transform: translateY(-5px);           /* Небольшой подъем для динамики */
+    0 0 30px var(--color-ai-spark-glow), 
+    0 0 60px rgba(0, 229, 255, 0.15);
+  transform: translateY(-5px);
 }
 
 .hero__image {
@@ -472,17 +468,41 @@ PORTFOLIO SECTION
   background-image: repeating-linear-gradient(45deg, rgba(0, 229, 255, 0.05) 0px, rgba(0, 229, 255, 0.05) 2px, transparent 2px, transparent 8px);
 }
 
-/* Превью для карточки текущего сайта */
 .project-card__img--this-site {
-  background-image: url('images/Image 4.png') !important; /* Используем то же изображение, что и в Hero */
+  background-image: url('images/Image 4.png') !important;
   background-size: cover;
-  background-position: top center; /* Центрируем по верхней части для лучшего кадра */
+  background-position: top center;
   opacity: 0.8;
   transition: opacity 0.4s ease;
 }
 
 .project-card:hover .project-card__img--this-site {
-  opacity: 1; /* Эффект «проявления» при наведении */
+  opacity: 1;
+}
+
+.project-card__img--guide {
+  background-image: url('images/Guide.jpg') !important;
+  background-size: cover;
+  background-position: right center; 
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-card__img--guide {
+  opacity: 1;
+}
+
+.project-card__img--beer {
+  background-image: url('images/PROХМЕЛЬ2.png') !important; 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.project-card:hover .project-card__img--beer {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .project-card__content {
@@ -591,6 +611,118 @@ FOOTER
   color: var(--color-clean-syntax-muted);
   font-size: 14px;
   border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ============================================
+МОДАЛЬНЫЕ ОКНА
+============================================ */
+
+/* Сброс стилей для ссылок-карточек */
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+/* Общий оверлей модального окна */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 17, 32, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+}
+
+/* Активация модалки при клике на хэш (#) в URL */
+.modal-overlay:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Само модальное окно */
+.modal-window {
+    background: var(--color-obsidian);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 229, 255, 0.05);
+}
+
+.modal-overlay:target .modal-window {
+    transform: scale(1);
+}
+
+/* Кнопка закрытия (крестик) */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 32px;
+    color: var(--color-clean-syntax-muted);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: var(--color-ai-spark);
+    transform: scale(1.1);
+}
+
+/* Текстовое наполнение */
+.modal-title {
+    font-family: var(--font-display);
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--color-clean-syntax);
+}
+
+.modal-text {
+    color: var(--color-clean-syntax-muted);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Сетка для 5 кнопок */
+.modal-buttons-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Стилизация кнопок внутри модалки */
+.modal-buttons-grid .btn {
+    text-align: center;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+/* Стиль для неактивных заглушек */
+.modal-buttons-grid .btn.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-style: dashed;
+    border-color: rgba(255,255,255,0.2);
+    color: var(--color-clean-syntax-muted);
 }
 
 /* ============================================
